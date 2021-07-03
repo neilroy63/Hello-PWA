@@ -1,0 +1,9 @@
+{
+    "name":"Hello World!",
+    "short_name": "Hello",
+    "lang": "en-UK",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_colour": "aqua",
+    "theme_colour": "aqua"
+}

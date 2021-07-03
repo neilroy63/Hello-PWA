@@ -4,7 +4,7 @@ var cacheName = "hello-pwa";
 // List of files that need to be cached
 var filesToCache = ["/", "index.html", "/css/style.css", "/js/main.js"];
 
-// Function to start the service worker and caching all of the app's content
+// Function to install/start the service worker and cache all of the app's content
 self.addEventListener("install", function (e) {
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
@@ -13,7 +13,7 @@ self.addEventListener("install", function (e) {
   );
 });
 
-// Function to serve cached content when offline
+// Function to serve(or load) cached content when offline
 self.addEventListener("fetch", function (e) {
   e.respondWith(
     caches.match(e.request).then(function (response) {
